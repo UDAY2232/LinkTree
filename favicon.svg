@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Glow ring -->
+  <circle cx="16" cy="16" r="14" fill="none" stroke="url(#ringGradient)" stroke-width="1.5" filter="url(#glow)"/>
+  
+  <!-- Gradient for glow ring -->
+  <defs>
+    <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Dark circular background -->
+  <circle cx="16" cy="16" r="12" fill="#05060a"/>
+  
+  <!-- UC text -->
+  <text x="16" y="20.5" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">UC</text>
+</svg>
